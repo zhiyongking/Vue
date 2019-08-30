@@ -1,14 +1,21 @@
 new Vue({
     el:"#vue-app",
     data:{
-        name:"米斯特王",
-        job:"web开发",
-        website:"zhiyongking.com",
-        websiteTag:"<a href='zhiyongking.com'>ZY</a>"
+       age:30,
+       x:0,
+       y:0
     },
     methods:{
-        greet: function(time){
-            return  'Good ' + time + "!" + " " +"Nice to meet you!" + " " + "My name is" + this.name;
-        }
+       add: function(inc){
+           this.age += inc;
+       },
+       subtract: function(dec){
+           this.age -= dec;
+       },
+       updateXY:function(event){
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+       }
+        
     }
 });
